@@ -72,7 +72,7 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <thead>
                     <tr>
                         <th>Student's ID</th>
-                        <th>SEIP ID</th>
+                        <th>SARON ID</th>
                         <th>Name</th>
                         <th>Courses</th>
                         <th>Batch Name</th>

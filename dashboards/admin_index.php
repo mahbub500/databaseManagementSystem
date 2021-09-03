@@ -24,6 +24,7 @@ else
     $query_certified= "SELECT COUNT(certified) FROM students WHERE certified='yes' and seip_id !=0";
     $query_applied_students="SELECT COUNT(seip_id) FROM students WHERE seip_id=0";
     $query_not_certified= "SELECT COUNT(certified) FROM students WHERE certified='no' and seip_id !=0";
+    $query_contact= "SELECT COUNT(id) FROM contact";
 ?>
 <!DOCTYPE html>
 <html>
@@ -313,15 +314,44 @@ else
                 ?>
             </div>
 
-            <div>
+            
+
+
+            <!-- contat start -->
+              <div>
                 <?php
-                foreach ($db->query($query_video) as $video):
+                foreach ($db->query($query_contact) as $contact):
+                  ?>
+
+
+                    <div class="col-lg-6 col-xs-6">
+                        <div class="small-box bg-aqua">
+                            <div class="inner">
+                                <h4>Number Of All Contact Request:</h4>
+                                <h3><?php echo $contact['COUNT(id)'];?></h3>
+                            </div>
+                            <div class="icon">
+                                <i class="fa  fa-clone"></i>
+                            </div>
+                            <a href="../contact/contact_us_view.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <?php
+                endforeach;
+                ?>
+            </div>
+            <!-- contat end -->
+
+            <!-- video start -->
+            <!-- <div>
+                <?php
+              //  foreach ($db->query($query_video) as $video):
                     ?>
                     <div class="col-lg-6 col-xs-6">
                         <div class="small-box bg-green">
                             <div class="inner">
                                 <h4>Number Of All Videos:</h4>
-                                <h3><?php echo $video['COUNT(id)'];?></h3>
+                                <h3><?php // echo $video['COUNT(id)'];?></h3>
                             </div>
                             <div class="icon">
                                 <i class="icon ion-videocamera"></i>
@@ -330,9 +360,11 @@ else
                         </div>
                     </div>
                     <?php
-                endforeach;
+                //endforeach;
                 ?>
-            </div>
+            </div> -->
+
+             <!-- video start -->
 
             <div>
                 <?php
@@ -505,26 +537,7 @@ else
 
 
         </div>
-      <!-- calendar ===============================================================================-->
-      <div class="row">
-        <section class="col-lg-12 connectedSortable">
-          <div class="box box-solid bg-green-gradient">
-            <div class="box-header">
-              <i class="fa fa-calendar"></i>
-              <h3 class="box-title">Calendar</h3>
-              <div class="pull-right box-tools">
-                <!-- button with a dropdown -->
-                <button type="button" class="btn btn-success btn-sm" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-              </div>
-            </div>
-            <div class="box-body no-padding">
-              <!--The calendar -->
-              <div id="calendar" style="width: 100%"></div>
-            </div>
-          </div>
-        </section>
-      </div>
+      
     </section>
     <!-- /.content -->
   </div>

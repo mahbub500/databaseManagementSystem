@@ -71,7 +71,7 @@ $query = "SELECT * FROM `students` ORDER BY seip_id ASC";
                     <thead>
                     <tr>
                         <th>Id</th>
-                        <th>SEIP ID</th>
+                        <th>SARON ID</th>
                         <th>Name</th>
                         <th>Father's Name</th>
                         <th>Mother's Name</th>

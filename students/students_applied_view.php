@@ -72,7 +72,7 @@ $query="SELECT * FROM students WHERE seip_id = 0";
                     <thead>
                     <tr>
                         <th>Id</th>
-                        <th>SEIP ID</th>
+                       <th>SARON ID</th>
                         <th>Name</th>
                         <th>Father's Name</th>
                         <th>Mother's Name</th>
@@ -83,6 +83,7 @@ $query="SELECT * FROM students WHERE seip_id = 0";
                         <th>Course_2</th>
                         <th>Course_3</th>
                         <th>Actions</th>
+                        
                     </tr>
                     </thead>
                     <tbody>
@@ -103,17 +104,10 @@ $query="SELECT * FROM students WHERE seip_id = 0";
                             <td><?= $student['course_1'] ?></td>
                             <td><?= $student['course_2'] ?></td>
                             <td><?= $student['course_3'] ?></td>
-
-                            <td>
-                            <form>
-                                <input type="text"  >
-                            </form>                               
-
+                            <td> 
                                 <a style="padding-right: 28px;padding-left: 28px;"
                                    class="btn btn-primary"
-                                   href="students_assign_done.php?id=<?php echo $student['id'];?>">Edit</a>
-                                
-
+                                   href="students_assign_done.php?id=<?php echo $student['id'];?>">Verify</a>
                             </td>
                         </tr>
                         <?php
@@ -124,8 +118,9 @@ $query="SELECT * FROM students WHERE seip_id = 0";
                 </table>
 
             </div>
+
         </div>
-    </div>
+    </div>   
 </section>
 <!--/  end =========================================================-->
 

@@ -72,7 +72,7 @@ $query="SELECT * FROM students WHERE gender='male' AND seip_id !=0";
                     <thead>
                     <tr>
                         <th>Id</th>
-                        <th>SEIP ID</th>
+                        <th>SARON ID</th>
                         <th>Name</th>
                         <th>Father's Name</th>
                         <th>Mother's Name</th>

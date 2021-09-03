@@ -6,13 +6,14 @@ $db = new PDO('mysql:host=localhost;dbname=seip;charset=utf8mb4','root','');
 $query = "SELECT * FROM `features` ORDER BY id";
 $query_workshop = "SELECT * FROM `workshops` ORDER BY id";
 $query_seip_course = "SELECT * FROM `seip_course` ORDER BY id";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SEIP Database Management</title>
+    <title>SARON Database Management</title>
     <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
     <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
     

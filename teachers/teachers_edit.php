@@ -10,7 +10,7 @@ $query = "SELECT * FROM `teachers` WHERE id = ".$_GET['id'];
 foreach ($db->query($query) as $row){
     $teachers = $row;
 }
-
+$img = $teachers['image'];
 
 ?>
 
@@ -67,7 +67,7 @@ foreach ($db->query($query) as $row){
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="header-section text-center">
-                <h2>Edit Trainer's Information</h2>
+                <h2>Edit Teacher's Information</h2>
                 
               <hr class="bottom-line">
             </div>
@@ -84,7 +84,8 @@ foreach ($db->query($query) as $row){
                 <br>
                 Experiences: <textarea name="experiences" type="text" value="<?=$teachers['experiences'];?>" class="form-control" rows="5" ></textarea>
                 <br>
-               	Image: <input type="file" name="image" value="<?=images/$teachers['image'];?>" class="form-control" placeholder="Enter the image">
+                <input type="hidden" name="image" value="<?php echo $img; ?>"> 
+               	Image: <input type="file" name="image" class="form-control" placeholder="Enter the image">
 				<br>
                 <button type="submit" name="upload" class="btn btn-green" >Submit</button>
 

@@ -86,9 +86,9 @@ foreach ($db->query($query) as $row){
                            value="<?=$students['id'];?>">
 
                     <div class="form-group">
-                        <label for="seip_id">SEIP_ID :</label>
+                        <label for="seip_id">SARON ID_ID :</label>
                         <input type="number" class="form-control" id="seip_id" name="seip_id"
-                               placeholder="Enter SEIP_ID" value="<?=$students['seip_id'];?>">
+                               placeholder="Enter SARON_ID" value="<?=$students['seip_id'];?>">
                     </div>
 
                     <div class="form-group">
