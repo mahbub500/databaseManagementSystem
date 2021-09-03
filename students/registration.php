@@ -492,52 +492,31 @@
 <!--Footer-->
 <footer id="footer" class="footer">
     <div class="container text-center">
-        <!--      <h2 class="text-success">What are you waiting for!</h2>-->
-        <!--      <h3 class="text-success">Start Your Course Now! Become a part of BITM</h3>-->
-        <!-- <form class="mc-trial row">
-          <div class="form-group col-md-3 col-md-offset-2 col-sm-4">
-            <div class=" controls">
-              <input name="name" placeholder="Enter Your Name" class="form-control" type="text">
-            </div>
-          </div>
-          <div class="form-group col-md-3 col-sm-4">
-            <div class=" controls">
-              <input name="EMAIL" placeholder="Enter Your email" class="form-control" type="email">
-            </div>
-          </div>
-          <div class="col-md-2 col-sm-4">
-            <p>
-              <button name="submit" type="submit" class="btn btn-block btn-submit">
-              Submit <i class="fa fa-arrow-right"></i></button>
-            </p>
-          </div>
-        </form> -->
+    
         <ul class="social-links">
-            <!-- <li><a href="#link"><i class="fa fa-twitter fa-fw"></i></a></li> -->
-
+           
             <li>
-                <a href="https://www.facebook.com/BASIS.BITM/" target="_blank">
+                <a href="#" target="_blank">
                     <i class="fa fa-facebook fa-fw"></i>
                 </a>
             </li>
 
             <li>
-                <a href="https://plus.google.com/103842390399681113250" target="_blank">
+                <a href="#" target="_blank">
                     <i class="fa fa-google-plus fa-fw"></i>
                 </a>
             </li>
 
-            <!-- <li><a href="#link"><i class="fa fa-dribbble fa-fw"></i></a></li> -->
-
+        
             <li>
-                <a href="https://www.linkedin.com/company/basis-institute-of-technology-&-management-bitm-" target="_blank">
+                <a href="#" target="_blank">
                     <i class="fa fa-linkedin fa-fw"></i>
                 </a>
             </li>
         </ul>
-        ©2017 SEIP_Database Management. All rights reserved
+        ©2021 Web Application Development with PHP and Frameworks (WDPF) . All rights reserved
         <div class="credits">
-            Designed by <a href="../contact/code_finder.php">Code_Finder</a>
+            Designed by <a href="#">SARON TEAM</a>
         </div>
     </div>
 </footer>

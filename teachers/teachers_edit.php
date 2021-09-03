@@ -10,7 +10,6 @@ $query = "SELECT * FROM `teachers` WHERE id = ".$_GET['id'];
 foreach ($db->query($query) as $row){
     $teachers = $row;
 }
-var_dump($teachers);
 
 
 ?>
@@ -85,8 +84,7 @@ var_dump($teachers);
                 <br>
                 Experiences: <textarea name="experiences" type="text" value="<?=$teachers['experiences'];?>" class="form-control" rows="5" ></textarea>
                 <br>
-                <input type="hidden" name="imagOld" value="<?php $teachers['image']; ?>">
-               	Image: <input type="file" name="image"  class="form-control" placeholder="Enter the image">
+               	Image: <input type="file" name="image" value="<?=images/$teachers['image'];?>" class="form-control" placeholder="Enter the image">
 				<br>
                 <button type="submit" name="upload" class="btn btn-green" >Submit</button>
 
@@ -103,31 +101,31 @@ var_dump($teachers);
 <!--Footer-->
 <footer id="footer" class="footer">
     <div class="container text-center">
-
+    
         <ul class="social-links">
-
+           
             <li>
-                <a href="https://www.facebook.com/BASIS.BITM/" target="_blank">
+                <a href="#" target="_blank">
                     <i class="fa fa-facebook fa-fw"></i>
                 </a>
             </li>
 
             <li>
-                <a href="https://plus.google.com/103842390399681113250" target="_blank">
+                <a href="#" target="_blank">
                     <i class="fa fa-google-plus fa-fw"></i>
                 </a>
             </li>
 
-
+        
             <li>
-                <a href="https://www.linkedin.com/company/basis-institute-of-technology-&-management-bitm-" target="_blank">
+                <a href="#" target="_blank">
                     <i class="fa fa-linkedin fa-fw"></i>
                 </a>
             </li>
         </ul>
-        ©2017 SEIP_Database Management. All rights reserved
+        ©2021 Web Application Development with PHP and Frameworks (WDPF) . All rights reserved
         <div class="credits">
-            Designed by <a href="../contact/code_finder.php">Code_Finder</a>
+            Designed by <a href="#">SARON TEAM</a>
         </div>
     </div>
 </footer>

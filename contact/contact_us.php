@@ -119,7 +119,7 @@
         <div class="raw">
             <div class="header-section text-center">
                 <h2>Find us on Google Map</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.902327439856!2d90.39136381498139!3d23.75086218458918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8bd552c2b3b%3A0x4e70f117856f0c22!2sBASIS+Institute+of+Technology+%26+Management!5e0!3m2!1sbn!2sbd!4v1495027388791" width="960" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.3023271609954!2d90.40961021530943!3d23.73659608459618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b9f6eb06bfb9%3A0xcbefa252dc74c3e9!2sThe%20Computers%20Ltd%20(TCLD)!5e0!3m2!1sen!2s!4v1630666266073!5m2!1sen!2s" width="960" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="row" style="padding: 50px">
@@ -131,7 +131,7 @@
             <div id="sendmessage">Your message has been sent. Thank you!</div>
             <div id="errormessage"></div>
 
-            <form name="contactform" method="post" action="send_mail.php" role="form" class="contactForm">
+            <form name="contactform" method="post" action="contact_us_done.php" role="form" class="contactForm">
                 <div class="col-md-6 col-sm-6 col-xs-12 left">
                     <div class="form-group">
                         <input type="text" name="first_name" class="form-control form"
@@ -181,9 +181,9 @@
         <div class="row">
             <div class="heaser-section text-center">
                 <h2>Address</h2>
-                <p>Address: BDBL Bhaban (5th Floor - West)<br>
-                    12, Kazi Nazrul Islam Ave<br>
-                    Dhaka 1215, Bangladesh</p>
+                <p>Address: The computers Limited (2nd Floor - West)<br>
+                    VIP Road Noya Polton <br>
+                    Dhaka 1200, Bangladesh</p>
                 <h4>Phone: +880 9612-342486</h4>
             </div>
         </div>
@@ -195,29 +195,29 @@
     <div class="container text-center">
     
         <ul class="social-links">
-         
-
+           
             <li>
-                <a href="https://www.facebook.com/BASIS.BITM/" target="_blank">
+                <a href="#" target="_blank">
                     <i class="fa fa-facebook fa-fw"></i>
                 </a>
             </li>
 
             <li>
-                <a href="https://plus.google.com/103842390399681113250" target="_blank">
+                <a href="#" target="_blank">
                     <i class="fa fa-google-plus fa-fw"></i>
                 </a>
             </li>
 
+        
             <li>
-                <a href="https://www.linkedin.com/company/basis-institute-of-technology-&-management-bitm-" target="_blank">
+                <a href="#" target="_blank">
                     <i class="fa fa-linkedin fa-fw"></i>
                 </a>
             </li>
         </ul>
-        ©2017 SEIP_Database Management. All rights reserved
+        ©2021 Web Application Development with PHP and Frameworks (WDPF) . All rights reserved
         <div class="credits">
-            Designed by <a href="code_finder.php">Code_Finder</a>
+            Designed by <a href="#">SARON TEAM</a>
         </div>
     </div>
 </footer>

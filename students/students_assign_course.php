@@ -107,7 +107,9 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <td><?php echo $student['id']?></td>
                             <td><?php echo $student['seip_id']?></td>
                             <td><?php echo $student['name']?></td>
-                            <td><?php echo $courses;?>
+                            <td><?php if ($courses==!"") {
+                              echo $courses;
+                            } ?>
                             <td><?php echo $student['batch_name']?></td>
                             <td><?php echo $student['certified']?></td>
                             <td>

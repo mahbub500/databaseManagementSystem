@@ -57,7 +57,7 @@
             </div>
             <div class="col-md-10 col-md-offset-1">
                 <div class="text-comment">
-                    <p class="text-par">"BITM is an excellent institution to learn IT knowledge who want to explore their future in this growing sectors and want to meet the challenges of the vartual world."</p>
+                    <p class="text-par">"SARON is an excellent institution to learn IT knowledge who want to explore their future in this growing sectors and want to meet the challenges of the vartual world."</p>
                     <p>
                         To enroll in any SEIP courses, an applicant must complete the online 'Application Form'
                         <br>
@@ -70,7 +70,7 @@
                         After Registration, a SEID will be sent to given email Address for verification. So please remember SEID for further procedure
                         <br>
                         3.Short-listing for MCQ Test:
-                        Before training start, candidate should sit for MCQ exam. So BITM Admin department can now shortlist applicant for specific training.
+                        Before training start, candidate should sit for MCQ exam. So SARON Admin department can now shortlist applicant for specific training.
                         <br>
                         4.Notify the student by SMS & Email for MCQ Test:
                         It is time to notify the selected student by SMS & email for MCQ test.
@@ -91,10 +91,10 @@
                         Shortlisting the applicants for Training based on interview performance.
                         <br>
                         10.Notify the student by SMS & Email for Registration:
-                        It is time to notify the selected student by SMS & email for coming at BITM with Registration Form (which is already attached in email), Last Educational Certificate (original), NID or BCN photocopy at specific date.
+                        It is time to notify the selected student by SMS & email for coming at SARON with Registration Form (which is already attached in email), Last Educational Certificate (original), NID or BCN photocopy at specific date.
                         <br>
                         11.Registration Day:
-                        Each & every selected student has to come to submit their Registration Form (which is already attached in email), Last Educational Certificate (original), NID or BCN photocopy. & then BITM executives tell their class time, schedule, Start date & all rules regulation.</p>
+                        Each & every selected student has to come to submit their Registration Form (which is already attached in email), Last Educational Certificate (original), NID or BCN photocopy. & then SARON executives tell their class time, schedule, Start date & all rules regulation.</p>
                 </div>
             </div>
         </div>
@@ -106,30 +106,31 @@
 <!--Footer-->
 <footer id="footer" class="footer">
     <div class="container text-center">
+    
         <ul class="social-links">
-        
-
+           
             <li>
-                <a href="https://www.facebook.com/BASIS.BITM/" target="_blank">
+                <a href="#" target="_blank">
                     <i class="fa fa-facebook fa-fw"></i>
                 </a>
             </li>
 
             <li>
-                <a href="https://plus.google.com/103842390399681113250" target="_blank">
+                <a href="#" target="_blank">
                     <i class="fa fa-google-plus fa-fw"></i>
                 </a>
             </li>
 
+        
             <li>
-                <a href="https://www.linkedin.com/company/basis-institute-of-technology-&-management-bitm-" target="_blank">
+                <a href="#" target="_blank">
                     <i class="fa fa-linkedin fa-fw"></i>
                 </a>
             </li>
         </ul>
-        ©2017 SEIP_Database Management. All rights reserved
+        ©2021 Web Application Development with PHP and Frameworks (WDPF) . All rights reserved
         <div class="credits">
-            Designed by <a href="../contact/code_finder.php">Code_Finder</a>
+            Designed by <a href="#">SARON TEAM</a>
         </div>
     </div>
 </footer>

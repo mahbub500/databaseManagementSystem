@@ -170,7 +170,7 @@ else
           </ul>
         </li>
         <!--SEIP Course-->
-        <li class="treeview">
+       <!--  <li class="treeview">
           <a href="#">
             <i class="fa fa-file-text-o"></i>
             <span>SEIP Course</span>
@@ -182,7 +182,7 @@ else
             <li><a href="../seip_course/seip_view.php"><i class="fa fa-circle-o"></i> View SEIP Course</a></li>
             <li><a href="../seip_course/seip_add.php"><i class="fa fa-edit"></i> Add SEIP Course</a></li>
           </ul>
-        </li>
+        </li> -->
         <!--course-->
         <li class="treeview">
           <a href="#">
@@ -236,16 +236,7 @@ else
             <li><a href="../teachers/teachers_add.php"><i class="fa fa-edit "></i> Add New Trainers</a></li>
           </ul>
         </li>
-        <!--Calendar-->
-        <li>
-          <a href="pages/calendar.html">
-            <i class="fa fa-calendar"></i> <span>Calendar</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-red"></small>
-            </span>
-          </a>
-        </li>
-
+       
         <!--Notice-->
         <li class="treeview">
           <a href="#">
@@ -265,7 +256,7 @@ else
           <a href="#">
             <i class="fa  fa-comments-o"></i> <span>Feedback</span>
             <span class="pull-right-container">
-              <small class="label pull-right bg-yellow">View</small>
+              <!-- <small class="label pull-right bg-yellow">View</small> -->
             </span>
           </a>
           <ul class="treeview-menu">
@@ -288,40 +279,7 @@ else
               </ul>
           </li>
 
-        <!--multi education-->
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-share"></i> <span>Education</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <!--<li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>-->
-            <li>
-              <a href="#"><i class="fa fa-video-camera"></i>Video Tutorials
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="../video/video_view_admin.php"><i class="fa fa-play"></i> View All Video</a></li>
-                <li><a href="../video/video_add.php"><i class="fa fa-plus-square-o"></i> Add Video</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-file-text-o"></i>Content
-                  <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                  </span>
-              </a>
-              <ul class="treeview-menu">
-                  <li><a href="../faq/faq_view.php"><i class="fa fa-play"></i> View All Content</a></li>
-                  <li><a href="../faq/faq_add.php"><i class="fa fa-plus-square-o"></i> Add Content</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
+       
 
       </ul>
     </section>
@@ -432,7 +390,7 @@ else
                             <div class="icon">
                                 <i class="icon ion-man"></i>
                             </div>
-                            <a href="../students/students_view.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                            <a href="../students/students_male_view.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     <?php
@@ -453,7 +411,7 @@ else
                             <div class="icon">
                                 <i class="icon ion-woman"></i>
                             </div>
-                            <a href="../students/students_view.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                            <a href="../students/students_female_view.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     <?php
@@ -516,7 +474,7 @@ else
                             <div class="icon">
                                 <i class="icon ion-ios-personadd-outline"></i>
                             </div>
-                            <a href="../students/students_view.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                            <a href="../students/students_applied_view.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     <?php

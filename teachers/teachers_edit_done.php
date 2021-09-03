@@ -26,12 +26,12 @@ else{
 //$result = $db->exec($query);
 $result = $db->query($query);
 
-var_dump($result);
+//var_dump($result);
 
 if($result){
     echo "Data has been updated successfully.";
-header("location:teachers_view.php");
 }else{
     echo "There is an error. Please try again later.";
 }
+header("location:teachers_view.php");
 ?>

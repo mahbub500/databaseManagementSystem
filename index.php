@@ -88,7 +88,7 @@ $query_seip_course = "SELECT * FROM `seip_course` ORDER BY id";
               </div>
               <div class="intro-para text-center quote">
                 <p class="big-text">Learning Today . . . Leading Tomorrow.</p>
-                <p class="small-text"> BITM was established with a vision to be a world-class IT
+                <p class="small-text"> SARON was established with a vision to be a world-class IT
                     institute in Bangladesh for the purpose of enhancing
                     <br> the competitiveness of the IT Sector in Bangladesh by creating a pool of qualified
                     <br>IT professionals and quality certified IT companies.
@@ -205,7 +205,8 @@ $query_seip_course = "SELECT * FROM `seip_course` ORDER BY id";
         <div class="container">
             <div class="row">
                 <div class="header-section text-center">
-                    <h2>Skills for Employment Investment Program (SEIP) | BITM</h2>
+                    <!-- <h2>Skills for Employment Investment Program (SEIP) | BITM</h2> -->
+                    <H2> The best training center in this city || SARON ||  </H2>
                     <p>The objective of developing unskilled and semi-skilled labor force into productive
                         and skilled labor in priority sectors and to support Government institutes,
                         private companies non-government.
@@ -266,7 +267,7 @@ $query_seip_course = "SELECT * FROM `seip_course` ORDER BY id";
                 </div>
                 <div class="col-md-6 col-sm-6">
                     <div class="text-comment">
-                        <p class="text-par">"BITM is an excellent institution to learn IT knowledge who want to
+                        <p class="text-par">"SARON is an excellent institution to learn IT knowledge who want to
                             explore their future in this growing sectors and want to meet the challenges of
                             the vartual world."
                         </p>
@@ -275,7 +276,7 @@ $query_seip_course = "SELECT * FROM `seip_course` ORDER BY id";
                 </div>
                 <div class="col-md-6 col-sm-6">
                     <div class="text-comment">
-                        <p class="text-par">"BITM is an excellent institution to learn IT knowledge who
+                        <p class="text-par">"SARON is an excellent institution to learn IT knowledge who
                             want to explore their future in this growing sectors and want to meet the
                             challenges of the vartual world."
                         </p>
@@ -300,11 +301,11 @@ $query_seip_course = "SELECT * FROM `seip_course` ORDER BY id";
             <div class="pm-staff-profile-container" >
               <div class="pm-staff-profile-image-wrapper text-center">
                 <div class="pm-staff-profile-image">
-                  <img src="assets/images/sir.jpg" alt="" class="img-thumbnail img-circle"/>
+                  <img src="assets/images/mahbub.jpg" alt="" class="img-thumbnail img-circle"/>
                 </div>   
               </div>                                
               <div class="pm-staff-profile-details text-center">  
-                <p class="pm-staff-profile-name">Mian Zadid Rusdid</p>
+                <p class="pm-staff-profile-name">Mahbubur Rahman</p>
                 <p class="pm-staff-profile-title">Head of Department. Lead Trainer, PHP with Laravel
                     Framework.</p>
               </div>     
@@ -314,11 +315,11 @@ $query_seip_course = "SELECT * FROM `seip_course` ORDER BY id";
             <div class="pm-staff-profile-container" >
               <div class="pm-staff-profile-image-wrapper text-center">
                 <div class="pm-staff-profile-image">
-                  <img src="assets/images/mimsir.jpg" alt="" class="img-thumbnail img-circle" />
+                  <img src="assets/images/fisal.jpg" alt="" class="img-thumbnail img-circle" />
                 </div>   
               </div>                                
               <div class="pm-staff-profile-details text-center">  
-                <p class="pm-staff-profile-name">Neamat Khan Mim</p>
+                <p class="pm-staff-profile-name">Md.Faisal Khan</p>
                 <p class="pm-staff-profile-title">Assitant Trainer, Responsive Web Design,
                     Cake PHP Framework.</p>
               </div>     
@@ -343,34 +344,36 @@ $query_seip_course = "SELECT * FROM `seip_course` ORDER BY id";
     <!--/ Faculity member end ====================================================-->
 
     <!--Footer start-->
-    <footer id="footer" class="footer">
+<footer id="footer" class="footer">
     <div class="container text-center">
+    
         <ul class="social-links">
+           
             <li>
-                <a href="https://www.facebook.com/BASIS.BITM/" target="_blank">
+                <a href="#" target="_blank">
                     <i class="fa fa-facebook fa-fw"></i>
                 </a>
             </li>
 
             <li>
-                <a href="https://plus.google.com/103842390399681113250" target="_blank">
+                <a href="#" target="_blank">
                     <i class="fa fa-google-plus fa-fw"></i>
                 </a>
             </li>
 
+        
             <li>
-                <a href="https://www.linkedin.com/company/basis-institute-of-technology-&-management-bitm-"
-                   target="_blank">
+                <a href="#" target="_blank">
                     <i class="fa fa-linkedin fa-fw"></i>
                 </a>
             </li>
         </ul>
-        ©2017 SEIP_Database Management. All rights reserved
+        ©2021 Web Application Development with PHP and Frameworks (WDPF) . All rights reserved
         <div class="credits">
-            Designed by <a href="contact/code_finder.php">Code_Finder</a>
+            Designed by <a href="#">SARON TEAM</a>
         </div>
     </div>
-    </footer>
+</footer>
     <!-- Footer-->
 
 <!-- Latest compiled and minified JavaScript -->
