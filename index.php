@@ -186,9 +186,11 @@ $query_seip_course = "SELECT * FROM `seip_course` ORDER BY id";
                           <a class='btn btn-green' style="margin-top:10px"
                              href="details/workshop_detail.php?id=<?php echo $workshops['id'];?>">View more
                           </a>
+                        
                           <a class='btn btn-green' style="margin-top:10px"
-                             href="details/admission.php">Admission
+                             href="workshops/workshop_student_registration.php?id=<?php echo $workshops["id"]; ?>">Admission
                           </a>
+
                       </div>
                   </div>
                   <hr>

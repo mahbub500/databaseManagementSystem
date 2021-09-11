@@ -1,9 +1,25 @@
+<?php
+
+// connection to db
+$db = new PDO('mysql:host=localhost;dbname=seip;charset=utf8mb4', 'root', '');
+
+//build query
+$query_workshops = "SELECT * FROM `workshops` WHERE id = ".$_GET['id'];
+
+//execute the query using php
+foreach ($db->query($query_workshops) as $row){
+    $workshops = $row;
+    // var_dump($row);
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SEIP Database Management</title>
+    <title>SARON Database Management</title>
     <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
     <meta name="keywords"
           content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
@@ -74,24 +90,19 @@
 <div class="container">
     <div class="row">
 
-        <form class="form-horizontal" action="registration_manage.php" method="post">
+        <form class="form-horizontal" action="workshop_student_registration_done.php" method="post">
             <fieldset style="border: solid rgba(25,128,126,0.73) 2px"><h3>Registration Form For SARON Training:</h3>
                                          
             </fieldset>
             <br>
             <fieldset style="border: solid #19807e 2px"><h3>Student Details</h3>
                   <div class="form-group">
-                    <label for="course_1" class="col-sm-2 control-label">First Preference: </label>
+                    <label for="course" class="col-sm-2 control-label">First Preference: </label>
                     <div class="col-sm-3">
-                        <select class="form-control" id="course_1" name="course_1" type="text">
-                            <option value="Affiliate Marketing">Affiliate Marketing</option>
-                            <option value="Web App Develop- PHP">Web App Develop-PHP</option>
-                            <option value="Digital Marketing Course">Digital Marketing Course</option>
-                            <option value="Mobile App Develop">Mobile App Develop</option>
-                            <option value="Graphics & Web UI design">Graphics & Web UI design</option>
-                            <option value="Web design">Web design</option>
-                            <option value="Practical SEO">Practical SEO</option>
-                            <option value="8">Web App Develop-Dot Net</option>
+                        <select class="form-control" id="course" name="course" type="text">
+
+            <option value="<?php echo $workshops["titles"]; ?>"><?php echo $workshops["titles"] ?></option>
+                            
                         </select>
                     </div>
                     <label for="email" class="col-sm-2 control-label">Enter Email Address: </label>
@@ -148,7 +159,7 @@
 
             <br>
             <button type="reset" class="btn btn-primary">Reset</button>
-            <button type="submit" class="btn btn-green">Submit</button>
+            <button type="submit" value="Submit" class="btn btn-green">Submit</button>
         </form>
         <br>
     </div>

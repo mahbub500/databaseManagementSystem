@@ -167,24 +167,11 @@ else
           </a>
           <ul class="treeview-menu">
             <li><a href="../workshops/workshop_view.php"><i class="fa fa-circle-o"></i> View Workshops</a></li>
+            <li><a href="../workshops/workshop_student_registrad_student.php"><i class="fa fa-circle-o"></i> View Registrad Student </a></li>
             <li><a href="../workshops/workshop_add.php"><i class="fa fa-edit"></i> Add New Workshop</a></li>
           </ul>
         </li>
-        <!--SEIP Course-->
-       <!--  <li class="treeview">
-          <a href="#">
-            <i class="fa fa-file-text-o"></i>
-            <span>SEIP Course</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="../seip_course/seip_view.php"><i class="fa fa-circle-o"></i> View SEIP Course</a></li>
-            <li><a href="../seip_course/seip_add.php"><i class="fa fa-edit"></i> Add SEIP Course</a></li>
-          </ul>
-        </li> -->
-        <!--course-->
+        
         <li class="treeview">
           <a href="#">
             <i class="fa fa-laptop"></i>
