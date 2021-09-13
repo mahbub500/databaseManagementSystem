@@ -1,3 +1,19 @@
+<?php
+
+// connection to db
+$db = new PDO('mysql:host=localhost;dbname=seip;charset=utf8mb4', 'root', '');
+
+//build query
+$query_workshops = "SELECT * FROM `seip_course` WHERE id = ".$_GET['id'];
+
+//execute the query using php
+foreach ($db->query($query_workshops) as $row){
+    $workshops = $row;
+    // var_dump($row);
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,25 +90,19 @@
 <div class="container">
     <div class="row">
 
-        <form class="form-horizontal" action="registration_manage.php" method="post">
+        <form class="form-horizontal" action="registration_manage.php" method="post" enctype="multipart/form-data">
             <fieldset style="border: solid rgba(25,128,126,0.73) 2px"><h3>Registration Form For SARON Training:</h3>
                                          
             </fieldset>
             <br>
             <fieldset style="border: solid #19807e 2px"><h3>Student Details</h3>
                   <div class="form-group">
-                    <label for="course_1" class="col-sm-2 control-label">First Preference: </label>
+                    <label for="course_1" class="col-sm-2 control-label">Selected Course</label>
                     <div class="col-sm-3">
-                        <select class="form-control" id="course_1" name="course_1" type="text">
-                            <option value="Affiliate Marketing">Affiliate Marketing</option>
-                            <option value="Web App Develop- PHP">Web App Develop-PHP</option>
-                            <option value="Digital Marketing Course">Digital Marketing Course</option>
-                            <option value="Mobile App Develop">Mobile App Develop</option>
-                            <option value="Graphics & Web UI design">Graphics & Web UI design</option>
-                            <option value="Web design">Web design</option>
-                            <option value="Practical SEO">Practical SEO</option>
-                            <option value="8">Web App Develop-Dot Net</option>
-                        </select>
+                        <select class="form-control"   name="course" type="text">
+                            <!-- <option value="Affiliate Marketing">Affiliate Marketing</option> -->
+                               <option value="<?php echo $workshops["titles"]; ?>"><?php echo $workshops["titles"] ?></option>
+                           </select>
                     </div>
                     <label for="email" class="col-sm-2 control-label">Enter Email Address: </label>
                     <div class="col-sm-3">
@@ -106,7 +116,7 @@
                     </div>
                      <label for="nid" class="col-sm-2 control-label">Mobile Number: </label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" id="nid" name="mobile"                     placeholder="+88018-000000" required>
+                        <input type="text" class="form-control" id="nid" name="mobile"placeholder="+88018-000000" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -129,26 +139,49 @@
                             <option>Female</option>
                         </select>
                     </div>
+                     <label  class="col-sm-2 control-label">Birth Date </label>
+                   <div class="col-sm-3">
+                        <input type="date" name="Birth" class="form-control" placeholder="Enter Bkash Reference No">
+                   </div>
+                    
+                </div>
+                <div class="form-group">
+                    <label  class="col-sm-2 control-label">Image: </label>
+                   <div class="col-sm-3">
+                       <input type="file" name="image" class="form-control" placeholder="Enter the image">
+                   </div>
+                   <label  class="col-sm-2 control-label">Education Qulification: </label>
+                   <div class="col-sm-3">
+                       <input type="text" name="education" class="form-control" placeholder="Enter the Heigiest Education">
+                   </div>
+
+                </div>
+                <div class="form-group">
                     <label for="nid" class="col-sm-2 control-label">NID Number: </label>
                     <div class="col-sm-3">
                         <input type="text" class="form-control" id="nid" name="nid"
                                placeholder="1234567890" required>
                     </div>
+                   
+                     <label for="bkash" class="col-sm-2 control-label">Amount </label>
+                  
+                     <div class="col-sm-3">
+                        <input type="number" class="form-control" id="nid" name="amount" placeholder="500/=" required>
+                    </div>
+
                 </div>
+               
                 
 
             </fieldset>
             <br>
 
-            <br>
-
-            <br>
-
+            
             <br>
 
             <br>
             <button type="reset" class="btn btn-primary">Reset</button>
-            <button type="submit" class="btn btn-green">Submit</button>
+            <button type="submit" value="upload" class="btn btn-green">Submit</button>
         </form>
         <br>
     </div>

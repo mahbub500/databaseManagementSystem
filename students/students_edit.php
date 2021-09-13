@@ -16,7 +16,7 @@ $query = "SELECT * FROM `students` WHERE id = ".$_GET['id'];
 foreach ($db->query($query) as $row){
     $students = $row;
 }
-
+$img = $students['image'];
 ?>
 
 <!DOCTYPE html>
@@ -78,31 +78,14 @@ foreach ($db->query($query) as $row){
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
 
-            <form action="students_edit_done.php" method="post">
+            <form action="students_edit_done.php" method="post" enctype="multipart/form-data">
                 <fieldset>
                     <legend>Student's Information</legend>
 
                     <input type="hidden" class="form-control" id="id" name="id" placeholder="ID"
-                           value="<?=$students['id'];?>">
+                           value="<?=$students['id'];?>">                 
 
-                    <div class="form-group">
-                        <label for="seip_id">SARON ID_ID :</label>
-                        <input type="number" class="form-control" id="seip_id" name="seip_id"
-                               placeholder="Enter SARON_ID" value="<?=$students['seip_id'];?>">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="batch_name">Batch Name:</label>
-                        <input type="text" class="form-control" id="batch_name" name="batch_name"
-                               placeholder="Enter Batch Name " value="<?=$students['batch_name'];?>">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="certified">Certified:</label>
-                        <input type="text" class="form-control" id="certified" name="certified"
-                               placeholder="Certified or not" value="<?=$students['certified'];?>">
-                    </div>
-
+                   
                     <div class="form-group">
                         <label for="name">Name :</label>
                         <input type="text" class="form-control" id="name" name="name"
@@ -131,6 +114,13 @@ foreach ($db->query($query) as $row){
                         <label for="nid">NID:</label>
                         <input type="number" class="form-control" id="nid" name="nid"
                                placeholder="Enter NID " value="<?=$students['nid'];?>">
+                    </div>
+
+                     <div class="form-group">
+                        <label >Imgae:</label>
+                       <input type="hidden" name="image" value="<?php echo $img; ?>"> 
+                <input type="file" name="image" class="form-control" placeholder="Enter the image">
+                <br>
                     </div>
 
                     <button type="submit" class="btn btn-green">Submit</button>

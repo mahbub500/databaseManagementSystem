@@ -10,16 +10,34 @@
 // connection to db
 $db = new PDO('mysql:host=localhost;dbname=seip;charset=utf8mb4', 'root', '');
 
+
+    $target = "images/".basename($_FILES['image']['name']);
+
+// connection to db
+$db = new PDO('mysql:host=localhost;dbname=seip;charset=utf8mb4', 'root', '');
+// $image = $_FILES['image']['name'];
 // build query
-$query = "UPDATE `students` SET 
-    `seip_id` = '".$_POST['seip_id']."',
-    `name` = '".$_POST['name']."', 
-    `father_name` = '".$_POST['father_name']."', 
-    `mother_name` = '".$_POST['mother_name']."',
-    `nid` = '".$_POST['nid']."',
-    `email` = '".$_POST['email']."',
-    `batch_name` = '".$_POST['batch_name']."',
-    `certified` = '".$_POST['certified']."'
+
+if ($_FILES['image']['name'] ) {
+       move_uploaded_file($_FILES['image']['tmp_name'],$target);
+       $image =  $_FILES['image']['name'];
+       var_dump($image);
+
+    }else{
+    $image =$_POST['image']; 
+    }
+    extract($_POST);
+
+// `students` (`id`,  `name`, `father_name`, `mother_name`, `gender`, `nid`, `email`, `course`, `image`, `amount`, `education`,`Birth`) VALUES (NULL,'$name','$father_name','$mother_name','$gender','$nid','$email','$course','$image','$amount','$education','$Birth')";
+// build query
+echo $query = "UPDATE `students` SET 
+    
+    `name` = '$name', 
+    `father_name` = '$father_name', 
+    `mother_name` = '$mother_name',
+    `nid` = '$nid',
+    `email` = '$email',   
+    `image` = '$image'   
     
     WHERE `students`.`id` = ".$_POST['id'];
 
@@ -31,12 +49,12 @@ $result = $db->query($query);
 
 //var_dump($result);
 
-//if($result){
-//    echo "Data has been updated successfully.";
-//}else{
-//    echo "There is an error. Please try again later.";
-//}
-//header("location:course_view.php");
+if($result){
+   echo "Data has been updated successfully.";
+header("location:students_view.php");
+}else{
+   echo "There is an error. Please try again later.";
+}
 ?>
 
 <!DOCTYPE html>

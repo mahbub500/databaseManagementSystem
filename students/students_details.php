@@ -52,7 +52,7 @@ foreach ($db->query($query) as $row){
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="../assets/images/bitm.png" alt="logo" height="40" width="100"></a>
+            <a class="navbar-brand" href="../dashboards/admin_index.php"><img src="../assets/images/bitm.png" alt="logo" height="40" width="100"></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right" style="padding-top: 10px">
@@ -75,39 +75,86 @@ foreach ($db->query($query) as $row){
 
 <!--show single student's details start ========================================================-->
 <section id ="feature" class="section-padding">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class=" col-md-12">
+
+            <div class=" col-md-3"> </div>
+            <div class=" col-md-3">
+             <div class="card" style="width: 18rem;">
+                <?php 
+                if ($student['image']) {?>                
+                
+                 
+              <img class="card-img-top pl-2"  src="images/<?= $student['image']  ?>"  style=" margin-bottom: 15px; margin-left: 40px; width: 180px; height:200px;" alt="Card image cap">
+
+          <?php } ;?>
+              
+            </div>
                 <table class="table table-bordered table-hover">
-                    <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>SARON ID</th>
-                        <th>Name</th>
-                        <th>Father's Name</th>
-                        <th>Mother's Name</th>
-                        <th>Gender</th>
-                        <th>NID</th>
-                        <th>Email</th>
-                        <th>Course_1</th>
-                        <th>Course_2</th>
-                        <th>Course_3</th>
-                    </tr>
-                    </thead>
+                    
                     <tbody>
-                    <tr>
-                        <td><?= $student['id'] ?></td>
-                        <td><?= $student['seip_id'] ?></td>
-                        <td><?= $student['name'] ?> </td>
-                        <td><?= $student['father_name'] ?></td>
-                        <td><?= $student['mother_name'] ?></td>
-                        <td><?= $student['gender'] ?></td>
-                        <td><?= $student['nid'] ?></td>
-                        <td><?= $student['email'] ?></td>
-                        <td><?= $student['course_1'] ?></td>
-                        <td><?= $student['course_2'] ?></td>
-                        <td><?= $student['course_3'] ?></td>
+                      <a type="button" class="btn btn-green" target="_blank" href="../pdf_genarator/student_detail.php?id=<?php echo $student['id'];?>"> Print <b>  <?= $student['name'] ?></b> detail </a>
+                   <tr>
+                    <th>Course</th>
+                         <td><?= $student['course'] ?></td>
                     </tr>
+                    <tr>
+                    <th>Name</th>
+                         <td><?= $student['name'] ?></td>
+                    </tr>
+                   
+                    <tr>
+                        <th>Father's Name</th>
+                        <td><?= $student['father_name'] ?></td>
+                        
+                       
+                    </tr>
+                    <tr>
+                         <th>Mother's Name</th>
+                         <td><?= $student['mother_name'] ?></td>
+                        
+                        
+                        
+                    </tr>
+                    <tr>
+                        <th>Gender</th>
+                        <td><?= $student['gender'] ?></td>
+                    </tr>
+                    <tr>
+                        <th>Birth Date</th>
+                        <td><?php echo $student['Birth'] ?></td>
+                    </tr>
+                    <tr>
+                        <th>NID</th>
+                         <td><?= $student['nid'] ?></td>
+                       
+                        
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                         <td><?= $student['email'] ?></td>    
+                    </tr>
+                    <tr>
+                        <th>Education</th>
+                         <td><?= $student['education'] ?></td>    
+                    </tr>
+                    <tr>
+                        <th>Payment</th>
+                         <td><?= $student['amount'] ?></td>    
+                    </tr>
+                     <tr>
+                        <th>Course Complete </th>
+                         <td><?php  
+
+                         if ($student['certified'] == 'yes' ) {
+                             echo "Yes";
+                         }else{
+                             echo "No";
+
+                         }
+                          ?></td>    
+                    </tr>
+                    
                     </tbody>
                 </table>
 

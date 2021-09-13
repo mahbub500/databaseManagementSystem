@@ -7,7 +7,7 @@ $query = "SELECT * FROM `students` ORDER BY seip_id ASC";
 //execution
 //$stmt = $db->query($query);
 //$students = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+$sl_no =1;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,23 +64,23 @@ $query = "SELECT * FROM `students` ORDER BY seip_id ASC";
 </nav>
 <!--table start =========================================================-->
 <section id ="feature" class="section-padding">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class=" col-md-12">
+
                 <table class="table table-bordered table-hover">
                     <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>SARON ID</th>
+                        <a type="button" target="_blank" class="btn btn-green" href="../pdf_genarator/student_all_detail.php"> Print All Student Detail </a> 
+                        <th>Id</th>                        
                         <th>Name</th>
                         <th>Father's Name</th>
                         <th>Mother's Name</th>
                         <th>Gender</th>
                         <th>NID</th>
                         <th>Email</th>
-                        <th>Course_1</th>
-                        <th>Course_2</th>
-                        <th>Course_3</th>
+                        <th>Course</th>                        
+                        <th>Education</th>
                         <th>Actions</th>
                     </tr>
                     </thead>
@@ -91,22 +91,30 @@ $query = "SELECT * FROM `students` ORDER BY seip_id ASC";
                         ?>
 
                         <tr>
-                            <td><?= $student['id'] ?></td>
-                            <td><?= $student['seip_id'] ?></td>
-                            <td><?= $student['name'] ?> </td>
+                            <td><?php echo $sl_no++; ?></td>
+                            
+                            <td> <a href="students_details.php?id=<?php echo $student['id'];?>"> <?= $student['name'] ?> </a> </td>
                             <td><?= $student['father_name'] ?></td>
                             <td><?= $student['mother_name'] ?></td>
                             <td><?= $student['gender'] ?></td>
                             <td><?= $student['nid'] ?></td>
-                            <td><?= $student['email'] ?></td>
-                            <td><?= $student['course_1'] ?></td>
-                            <td><?= $student['course_2'] ?></td>
-                            <td><?= $student['course_3'] ?></td>
+
+                            <td> <?php $Semail = $student['email'] ?>
+                                <?php 
+                                if (strlen($Semail)>5) {
+                                    echo substr($Semail,0,5)."...."."<br>";
+                                }else{
+                                    echo $Semail;
+
+                                }
+                                 ?>
+
+                            </td>
+                            <td><?= $student['course'] ?></td>
+                            <td><?= $student['education'] ?></td>                          
 
                             <td>
-                                <a style="padding-right: 26px;padding-left: 25px;"
-                                   class="btn btn-green"
-                                   href="students_details.php?id=<?php echo $student['id'];?>">View</a>
+                               
 
                                 <a style="padding-right: 28px;padding-left: 28px;"
                                    class="btn btn-primary"

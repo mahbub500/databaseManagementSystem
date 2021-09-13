@@ -1,28 +1,37 @@
-
 <?php
-//connection to database
+$msg = "";
 $db = new PDO('mysql:host=localhost;dbname=seip;charset=utf8mb4', 'root', '');
 
-//query
-$query = 'INSERT INTO `students` ( `name`, `father_name`, `mother_name`,
-                                  `gender`, `nid`, `email`, 
-                                  `course_1`, `course_2`, `course_3`) 
-VALUES ("' . $_POST['name'] . '","' . $_POST['father_name'] . '","' . $_POST['mother_name'] . '",
-    "' . $_POST['gender'] . '", "' . $_POST['nid'] . '", "' . $_POST['email'] . '",
-    "' . $_POST['course_1'] . '","' . $_POST['course_2'] . '", "' . $_POST['course_3'] . '")';
+    $target = "images/".basename($_FILES['image']['name']);
+    extract($_POST);
 
 
-//execute the query using php
+////connection to database
+
+$image = $_FILES['image']['name'];
+
+
+////building query
+$query = "INSERT INTO `students` (`id`,  `name`, `father_name`, `mother_name`, `gender`, `nid`, `email`, `course`, `image`, `amount`, `education`,`Birth`) VALUES (NULL,'$name','$father_name','$mother_name','$gender','$nid','$email','$course','$image','$amount','$education','$Birth')";
+
+if(move_uploaded_file($_FILES['image']['tmp_name'],$target)){
+$msg = "Image uploaded Successfully";   
+}
+else{
+    $msg = "There is a problem";
+}
+// execute the query using php
 $result = $db->exec($query);
 
-//var_dump($result);
 
-//if($result){
-//    echo "Data has been inserted successfully.";
-//}else{
-//    echo "There is an error. Please try again later.";
-//}
-//header("location:course_view.php");
+// var_dump($result);
+
+if($result){
+   echo "Data has been inserted successfully.";
+    header("location:../index.php");
+}else{
+   echo "There is an error. Please try again later.";
+}
 ?>
 
 <!DOCTYPE html>
@@ -81,15 +90,15 @@ $result = $db->exec($query);
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-danger text-center">
                 <?php
-                if($result){
-                    echo "Registration successfully done.";
-                    echo "<br>";
-                    echo "Thanks.";
-                }else{
-                    echo "Sorry !";
-                    echo "<br>";
-                    echo "There is an error. Please try again later.";
-                }
+                // if($result){
+                //     echo "Registration successfully done.";
+                //     echo "<br>";
+                //     echo "Thanks.";
+                // }else{
+                //     echo "Sorry !";
+                //     echo "<br>";
+                //     echo "There is an error. Please try again later.";
+                // }
                 ?>
             </div>
         </div>

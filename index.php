@@ -156,6 +156,62 @@ $query_seip_course = "SELECT * FROM `seip_course` ORDER BY id";
       </div>
     </section>
     <!--/ feature end =========================================================-->
+        <!--Seip Courses start =============================================================-->
+    <section id ="work-shop" class="section-padding" style=" padding-top: 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="header-section text-center">
+                    <!-- <h2>Skills for Employment Investment Program (SEIP) | BITM</h2> -->
+                    <H2> The best training center in this city || SARON ||  </H2>
+                    <p>The objective of developing unskilled and semi-skilled labor force into productive
+                        and skilled labor in priority sectors and to support Government institutes,
+                        private companies non-government.
+                    </p>
+                    <hr class="bottom-line">
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="fea">
+
+            <?php
+            foreach ($db->query($query_seip_course) as $seip_course):
+                ?>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-box text-center">
+                            <div class="icon-box">
+                                <i class="<?php echo $seip_course['icons']?>"></i>
+                            </div>
+                            <div class="icon-text">
+
+                                <h4 class="ser-text"><?php echo $seip_course['titles'];?></h4>
+
+                                <p>Start's from: <?php echo $seip_course['times'];?></p>
+
+                                <a class='btn btn-green' style="margin-top:10px"
+                                   href="details/seip_course_details.php?id=<?php echo $seip_course['id'];?>">View more
+                                </a>
+                                <!-- <a class='btn btn-green' style="margin-top:10px" href="details/admission.php">Admission</a> -->
+                                 <a class='btn btn-green' style="margin-top:10px"
+                             href="students/registration.php?id=<?php echo $seip_course["id"]; ?>">Admission
+                          </a>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+
+
+
+                <?php
+            endforeach;
+            ?>
+        </div>
+        </div>
+        <hr>
+    </section>
+    <!--/ Courses end =============================================================-->
 
     <!--work-shop start ==========================================================-->
     <section id="work-shop" class="section-padding">
@@ -203,61 +259,7 @@ $query_seip_course = "SELECT * FROM `seip_course` ORDER BY id";
     </section>
     <!--/ work-shop end ==========================================================-->
 
-    <!--Seip Courses start =============================================================-->
-    <section id ="work-shop" class="section-padding" style=" padding-top: 0px;">
-        <div class="container">
-            <div class="row">
-                <div class="header-section text-center">
-                    <!-- <h2>Skills for Employment Investment Program (SEIP) | BITM</h2> -->
-                    <H2> The best training center in this city || SARON ||  </H2>
-                    <p>The objective of developing unskilled and semi-skilled labor force into productive
-                        and skilled labor in priority sectors and to support Government institutes,
-                        private companies non-government.
-                    </p>
-                    <hr class="bottom-line">
-                </div>
-            </div>
-        </div>
 
-        <div class="container">
-            <div class="fea">
-
-            <?php
-            foreach ($db->query($query_seip_course) as $seip_course):
-                ?>
-
-                    <div class="col-md-4 col-sm-6">
-                        <div class="service-box text-center">
-                            <div class="icon-box">
-                                <i class="<?php echo $seip_course['icons']?>"></i>
-                            </div>
-                            <div class="icon-text">
-
-                                <h4 class="ser-text"><?php echo $seip_course['titles'];?></h4>
-
-                                <p>Start's from: <?php echo $seip_course['times'];?></p>
-
-                                <a class='btn btn-green' style="margin-top:10px"
-                                   href="details/seip_course_details.php?id=<?php echo $seip_course['id'];?>">View more
-                                </a>
-                                <a class='btn btn-green' style="margin-top:10px"
-                                   href="details/admission.php">Admission
-                                </a>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-
-
-
-                <?php
-            endforeach;
-            ?>
-        </div>
-        </div>
-        <hr>
-    </section>
-    <!--/ Courses end =============================================================-->
 
     <!--Testimonial start =========================================================-->
     <section id="testimonial" class="section-padding">
