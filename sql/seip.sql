@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2021 at 10:21 AM
+-- Generation Time: Sep 11, 2021 at 11:43 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -299,36 +299,28 @@ CREATE TABLE `students` (
   `gender` varchar(255) NOT NULL,
   `nid` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `course` varchar(255) NOT NULL,
+  `course_1` varchar(255) NOT NULL,
+  `course_2` varchar(255) NOT NULL,
+  `course_3` varchar(255) NOT NULL,
   `batch_name` varchar(255) NOT NULL,
   `certified` varchar(255) NOT NULL,
-  `is_varefied` tinyint(1) NOT NULL DEFAULT 0,
-  `image` varchar(255) NOT NULL,
-  `amount` int(11) NOT NULL,
-  `education` varchar(255) NOT NULL,
-  `Birth` date NOT NULL
+  `is_varefied` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `students`
 --
 
-INSERT INTO `students` (`id`, `seip_id`, `name`, `father_name`, `mother_name`, `gender`, `nid`, `email`, `course`, `batch_name`, `certified`, `is_varefied`, `image`, `amount`, `education`, `Birth`) VALUES
-(2, 111112, 'Faisal jamil', 'Abbas ahmed', 'Noor Begum', 'Male', '323456', 'abc@gmail.com', 'Digital Marketing Course', '', 'no', 0, '', 0, '', '2021-09-28'),
-(3, 111113, 'Faisal minhaz', 'Abbas uddin', 'Noor jahan', 'Male', '223456', 'aabc@gmail.com', 'Practical SEO', 'G-52', 'yes', 0, '', 0, '', '2021-09-28'),
-(4, 111114, 'Jahan minhaz', 'jahan uddin', 'fatema jahan', 'Male', '423456', 'dac@gmail.com', 'Web App Develop- PHP n', 'seo-51', 'no', 0, '', 0, '', '2021-09-28'),
-(5, 111115, 'Abu minhaz', 'Ahmed ali', 'fatema noor', 'Male', '523456', 'eac@gmail.com', 'Web App Develop- PHP', 'Web-51', 'no', 0, '', 0, '', '2021-09-28'),
-(6, 111116, 'Salauddin', 'Md Abu', 'Salea Katun', 'Male', '6123456', 'salauddin@gmail.com', 'Web App Develop- PHP', 'G-52', 'no', 0, '', 0, '', '2021-09-28'),
-(7, 111117, 'Nasrin Simu', 'Mohammad Ali', 'Julekha Bugum', 'Female', '7123456789', 'simu@gma.com', 'Digital Marketing Course', 'G-52', 'no', 0, '', 0, '', '2021-09-28'),
-(29, 1124, 'Faisal ahmed (Update)', 'Abbas ali', 'Fathema', 'Male', '8765432109', 'ahmed@gmail.com', 'Web App Develop- PHP', '', 'yes', 0, '', 0, '', '2021-09-28'),
-(34, 0, 'Mahbubur Rahman', 'Sheikh Mohi Uddin', 'Halima Khatun', 'Male', '6004174006', 'admin@gmail.com', '', '', '', 0, '0001.jpg', 500, 'HSC', '2021-09-28'),
-(35, 0, 'Mahbubur Rahman', 'Sheikh Mohi Uddin', 'Halima Khatun', 'Male', '5091684984', 'admin@gmail.com', '', '', '', 0, '0001.jpg', 500, 'HSC', '2021-09-28'),
-(37, 0, 'Mahbubur Rahman', 'Sheikh Mohi Uddin', 'Halima Khatun', 'Male', '60041', 'admin@gmail.com', '', '', '', 0, '0001.jpg', 500, 'HSC', '2021-09-28'),
-(40, 0, 'Maruf Rahman', 'Sheikh Mohi Uddin', 'Halima Khatun', 'Male', '6004174', 'admin@gmail.com', 'Mobile App Develop', '', '', 0, '0001.jpg', 500, 'HSC', '2021-09-28'),
-(41, 0, 'sanjida (upd)', 'Sheikh Mohi Uddin', 'Halima Khatun', 'Female', '32686094', 'admin@gmail.com', 'Practical SEO', '', '', 0, 'MEHIDE-001.jpg', 1000, 'HSC', '2021-09-28'),
-(42, 0, 'Maruf Rahman', 'Sheikh Mohi Uddin', 'Halima Khatun', 'Female', '43514643467', 'admin@gmail.com', 'Web Design', '', '', 0, 'M.jpg', 1000, 'HSC', '2021-09-08'),
-(45, 0, 'Mahbubur Rahman', 'Sheikh Mohi Uddin', 'Halima Khatun', 'Female', '32686', 'admin@gmail.com', 'Web Design', '', '', 0, 'singcopy.jpg', 10, 'HSC', '2021-09-28'),
-(46, 0, 'sanjida (update) new', 'korim', 'rohim', 'Female', '60041740', 'admin@gmail.com', 'Mobile App Develop', '', '', 0, '001.jpg', 100, 'HSC', '2021-09-02');
+INSERT INTO `students` (`id`, `seip_id`, `name`, `father_name`, `mother_name`, `gender`, `nid`, `email`, `course_1`, `course_2`, `course_3`, `batch_name`, `certified`, `is_varefied`) VALUES
+(2, 111112, 'Faisal jamil', 'Abbas ahmed', 'Noor Begum', 'Male', '323456', 'abc@gmail.com', 'Digital Marketing Course', 'Web App Develop- PHP', 'Web design', '', 'no', 0),
+(3, 111113, 'Faisal minhaz', 'Abbas uddin', 'Noor jahan', 'Male', '223456', 'aabc@gmail.com', 'Practical SEO', 'Web App Develop- PHP', 'Web App Develop- PHP', 'G-52', 'yes', 0),
+(4, 111114, 'Jahan minhaz', 'jahan uddin', 'fatema jahan', 'Male', '423456', 'dac@gmail.com', 'Web App Develop- PHP', 'Digital Marketing Course', 'Graphics & Web UI design', 'seo-51', 'no', 0),
+(5, 111115, 'Abu minhaz', 'Ahmed ali', 'fatema noor', 'Male', '523456', 'eac@gmail.com', 'Web App Develop- PHP', 'Digital Marketing Course', 'Graphics & Web UI design', 'Web-51', 'no', 0),
+(6, 111116, 'Salauddin', 'Md Abu', 'Salea Katun', 'Male', '6123456', 'salauddin@gmail.com', 'Web App Develop- PHP', 'Web App Develop- PHP', 'Web App Develop- PHP', 'G-52', 'no', 0),
+(7, 111117, 'Nasrin Simu', 'Mohammad Ali', 'Julekha Bugum', 'Female', '7123456789', 'simu@gma.com', 'Digital Marketing Course', 'Web design', 'Web App Develop- PHP', 'G-52', 'no', 0),
+(29, 1124, 'Faisal ahmed (Update)', 'Abbas ali', 'Fathema', 'Male', '8765432109', 'ahmed@gmail.com', 'Web App Develop- PHP', 'Web App Develop- PHP', 'Web App Develop- PHP', '', 'yes', 0),
+(31, 123456, 'Sayma Shirin', 'Abbas uddin', 'Salena Katun', 'Female', '582741963', 'sayma@gmail.com', 'Affiliate Marketing', 'Affiliate Marketing', 'Affiliate Marketing', '', 'no', 0),
+(32, 0, 'Mahbubur Rahman', 'Saleh Ahmed', 'Nur Hasna', 'Male', '2154654121', 'mahbub500@gmail.com', 'Affiliate Marketing', 'Digital Marketing Course', 'Mobile App Develop', '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -457,10 +449,9 @@ CREATE TABLE `workshops_registration` (
 
 INSERT INTO `workshops_registration` (`id`, `course`, `email`, `name`, `fatherName`, `motherName`, `mobile`, `nid`, `gender`, `Is_verify`) VALUES
 (2, 'Web Design Course', 'admin@gmail.com', 'Mahbubur Rahman', 'Sheikh Mohi Uddin', 'Halima Khatun', '01515297025', 2147483647, 'Male', 1),
-(3, 'Web Design Course', 'admin@gmail.com', 'Faded SkyBlu ', 'korim', 'rohim', '01515297025', 2147483647, 'Male', 1),
-(6, 'Android Workshop', 'mahubmr500@gmail.com', 'Mahbubur Rahman', 'Rasel', 'rohim', '01515297025', 60041740, 'Male', 1),
-(9, 'SEO Workshop', 'maruf@gmail.com', 'Maruf Rahman', 'Saleh Ahmed', 'Nur Hasna', '01829493782', 2147483647, 'Male', 0),
-(10, 'CSS3 Workshop', 'mahubmr500@gmail.com', 'Maruf Rahman', 'Saleh Ahmed', 'Halima Khatun', '01515297025', 60041740, 'Male', 0);
+(3, 'Web Design Course', 'admin@gmail.com', 'Faded SkyBlu ', 'korim', 'rohim', '01515297025', 2147483647, 'Male', 0),
+(6, 'Android Workshop', 'mahubmr500@gmail.com', 'Mahbubur Rahman', 'Rasel', 'rohim', '01515297025', 60041740, 'Male', 0),
+(9, 'SEO Workshop', 'maruf@gmail.com', 'Maruf Rahman', 'Saleh Ahmed', 'Nur Hasna', '01829493782', 2147483647, 'Male', 0);
 
 --
 -- Indexes for dumped tables
@@ -583,7 +574,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `employee`
@@ -631,7 +622,7 @@ ALTER TABLE `seip_course`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `teachers`
@@ -661,7 +652,7 @@ ALTER TABLE `workshops`
 -- AUTO_INCREMENT for table `workshops_registration`
 --
 ALTER TABLE `workshops_registration`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

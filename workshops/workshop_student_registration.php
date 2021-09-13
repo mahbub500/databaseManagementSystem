@@ -55,7 +55,7 @@ foreach ($db->query($query_workshops) as $row){
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right" style="padding-top: 10px">
                 <li><a href="../index.php">Home <span class="sr-only">(current)</span></a></li>
-                <li class="active"><a href="registration.php">Registration</a></li>
+                <li class="active"><a href="../students/registration.php">Registration</a></li>
                 <li><a href="../contact/contact_us.php">Contact US</a>
 
                     <?php

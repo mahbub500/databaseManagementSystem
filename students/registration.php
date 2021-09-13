@@ -4,13 +4,19 @@
 $db = new PDO('mysql:host=localhost;dbname=seip;charset=utf8mb4', 'root', '');
 
 //build query
+if (!empty($_GET['id'])) {
+    // code...
 $query_workshops = "SELECT * FROM `seip_course` WHERE id = ".$_GET['id'];
+
 
 //execute the query using php
 foreach ($db->query($query_workshops) as $row){
     $workshops = $row;
     // var_dump($row);
 }
+}
+    
+
 
 
 ?>
@@ -101,7 +107,16 @@ foreach ($db->query($query_workshops) as $row){
                     <div class="col-sm-3">
                         <select class="form-control"   name="course" type="text">
                             <!-- <option value="Affiliate Marketing">Affiliate Marketing</option> -->
+                  <?php //execute the query using php
+                  if ($_GET['id']) { ?>                      
                                <option value="<?php echo $workshops["titles"]; ?>"><?php echo $workshops["titles"] ?></option>
+                <?php   }else{
+                  $query_workshops_course = "SELECT * FROM `seip_course`";
+                  foreach ($db->query($query_workshops_course) as $row1){ ?>
+                                            
+                               <option value="<?php echo $row1["titles"]; ?>"><?php echo $row1["titles"] ?></option>
+                           <?php }} ?>
+
                            </select>
                     </div>
                     <label for="email" class="col-sm-2 control-label">Enter Email Address: </label>
