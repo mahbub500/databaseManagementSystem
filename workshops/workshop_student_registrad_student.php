@@ -122,7 +122,7 @@ $sl_no = 1;
                     ?>
 
                     </tbody>
-                   <button class="btn btn-outline-primary"> <a style="color: #463030;font-size: 19px; font-weight: 800;"  target="_blank"  href="../pdf_genarator/generate_pdf.php">Student List</a> </button>
+                   <button class="btn btn-green "> <a style="color: #463030;font-size: 19px; font-weight: 800;"  target="_blank"  href="../pdf_genarator/generate_pdf.php">Student List</a> </button>
                     <!-- pdf_genarator/generate_pdf.php -->
                 </table>
 
